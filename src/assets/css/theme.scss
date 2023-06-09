@@ -1,0 +1,92 @@
+@mixin light {
+  --background-color: #f8f6f4;
+  --header-background-color: #c4dfdf;
+  --aside-background-color: #eeeeee;
+  --item-hover-background-color: #c4dfdf;
+  --border-color: #565656;
+  --text-color: #333;
+  --modal-mask-background-color: rgba(0, 0, 0, 0.2);
+  --modal-content-background-color: #fff;
+  --input-background-color: #eeeeee;
+  --aside-item-hover-background-color: #dbdfea;
+  --aside-item-active-background-color: #9db2bf;
+  --scrollbar-thumb-background-color: #b7c4cf;
+  --input-outline-color: #5da7db;
+  --button-cancel-background-color: #faf7f0;
+  --button-cancel-hover-background-color: #b7c4cf;
+  --button-confirm-background-color: #77e4d4;
+  --button-confirm-hover-background-color: #00dfa2;
+  --menu-background-color: #a6d0dd;
+  --menu-separator-background-color: #99a98f;
+  --menu-item-hover-background-color: #c4dfdf;
+  /* highlight.js */
+  --hljs-color: #abb2bf;
+  --hljs-background: #282c34;
+  --hljs-comment-color: #5c6370;
+  --hljs-keyword-color: #c678dd;
+  --hljs-section-color: #e06c75;
+  --hljs-literal-color: #56b6c2;
+  --hljs-string-color: #98c379;
+  --hljs-variable-color: #d19a66;
+  --hljs-title-color: #61aeee;
+  --hljs-builtin-color: #e6c07b;
+  /* code actions */
+  --code-action-color: #999;
+  --code-action-hover-color: #ddd;
+}
+
+@mixin dark {
+  --background-color: #333333;
+  --header-background-color: #2c3333;
+  --aside-background-color: #555;
+  --item-hover-background-color: #c4dfdf;
+  --border-color: #565656;
+  --text-color: #eee;
+  --modal-mask-background-color: rgba(99, 99, 99, 0.3);
+  --modal-content-background-color: #333333;
+  --input-background-color: #444;
+  --aside-item-hover-background-color: #7f8487;
+  --aside-item-active-background-color: #413f42;
+  --scrollbar-thumb-background-color: #7f8487;
+  --input-outline-color: #a3c7d6;
+  --button-cancel-background-color: #444;
+  --button-cancel-hover-background-color: #555;
+  --button-confirm-background-color: #4e9f3d;
+  --button-confirm-hover-background-color: #5caa4c;
+  --menu-background-color: #393646;
+  --menu-separator-background-color: #6d5d6e;
+  --menu-item-hover-background-color: #4f4557;
+  /* highlight.js */
+  --hljs-color: #abb2bf;
+  --hljs-background: #282c34;
+  --hljs-comment-color: #5c6370;
+  --hljs-keyword-color: #c678dd;
+  --hljs-section-color: #e06c75;
+  --hljs-literal-color: #56b6c2;
+  --hljs-string-color: #98c379;
+  --hljs-variable-color: #d19a66;
+  --hljs-title-color: #61aeee;
+  --hljs-builtin-color: #e6c07b;
+  /* code actions */
+  --code-action-color: #999;
+  --code-action-hover-color: #ddd;
+}
+/* light */
+.theme-light {
+  @include light;
+}
+@media only screen and (prefers-color-scheme: light) {
+  :root {
+    @include light;
+  }
+}
+
+/* dark */
+.theme-dark {
+  @include dark;
+}
+@media only screen and (prefers-color-scheme: dark) {
+  :root {
+    @include dark;
+  }
+}
