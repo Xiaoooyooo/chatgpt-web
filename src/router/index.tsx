@@ -1,10 +1,10 @@
-import { createBrowserRouter } from "react-router-dom";
+import { createHashRouter } from "react-router-dom";
 import Layout from "@/layouts/Layout";
 import Welcome from "@/views/Welcome";
 import Settings from "@/views/Settings";
 import Chat from "@/views/Chat";
 
-const router = createBrowserRouter(
+const router = createHashRouter(
   [
     {
       path: "",
@@ -25,7 +25,7 @@ const router = createBrowserRouter(
       ],
     },
   ],
-  { basename: "/chatgpt-web" }
+  { basename: "/" }
 );
 
 export default router;
