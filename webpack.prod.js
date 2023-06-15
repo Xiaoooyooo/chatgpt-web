@@ -3,6 +3,10 @@ const config = require("./webpack.config");
 /** @type {typeof config} */
 const prodConfig = {
   ...config,
+  output: {
+    ...config.output,
+    publicPath: "/chatgpt-web",
+  },
   devtool: false,
   mode: "production",
   optimization: {
